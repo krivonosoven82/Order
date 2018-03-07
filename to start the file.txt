@@ -1,3 +1,4 @@
-Запуск через node.js 
-команда: npm i   
-затем: npm run dev
+Open: node.js 
+> "...your path to folder"
+> npm i   
+> npm run dev
