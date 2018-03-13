@@ -63,6 +63,9 @@ body{
   &--dark{
     border-bottom: 1px solid $borderLineDark;
   }
+  &--data{
+    background-color: $backgroundDate;
+  }
   &--footer{
     background-color: $orange;
   }
@@ -252,13 +255,14 @@ body{
   display: none;
   position: absolute;
   top: 35px;
-  left: 9px;
+  left: 0;
   @media(max-width: 679px){
     width: 213px;
     display: flex;
     flex-direction: column;
     border-radius: 0 0 5px 5px;
     background-color: $white;
+    z-index: 11;
    }
 }
 .in-i-btn{
@@ -298,9 +302,6 @@ body{
 
 }
 //----------class-w-date--------------------------------------------------------
-.w-date{
-  background-color: $backgroundDate;
-}
 .w-d-item{
   padding: 1px 16px 1px 9px;
   display: flex;
@@ -340,7 +341,7 @@ body{
 .it-w-input{
   width: 100%;
   max-width: 246px;
-  height: 16px;
+  height: 38px;
   border: 1px solid $borderLineLight;
   border-radius: 5px;
   outline: none;
