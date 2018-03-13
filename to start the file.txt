@@ -1,4 +1,0 @@
-Open: node.js 
-> "...your path to folder"
-> npm i   
-> npm run dev
