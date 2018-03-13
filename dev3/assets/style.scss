@@ -1,4 +1,4 @@
-//----------reset-style
+//----------reset-style---------------------------------------------------------
 *,
 *::after,
 *::before{
@@ -12,8 +12,7 @@
     outline: 0;
     outline-offset: 0;
 }
-
-//----------variables - color
+//----------variables - color---------------------------------------------------
 $white: #fff;
 $black: #000;
 $red: #fe0000;
@@ -33,18 +32,18 @@ $borderLineDark: #acacac;
 $twitter: #3aaaeb;
 $facebook: #3c5a9a;
 $backgroundDate: #f1f1f1;
-//----------mixin
+//----------mixin---------------------------------------------------------------
 @mixin transition($time: 0.3s){
   transition: all $time ease-in-out;
 }
-//----------base-style
+//----------base-style----------------------------------------------------------
 body{
   width: 100%;
   min-width: 320px;
   font-family: 'Conv_Roboto-Regular', 'Conv_Roboto-Bold',
    'FontAwesome';
 }
-//-----------global-class
+//-----------global-class-------------------------------------------------------
 .img{
   width: 100%;
   height: 100%;
@@ -74,7 +73,7 @@ body{
   cursor: pointer;
   @include transition;
 }
-//----------modify-class
+//----------modify-class--------------------------------------------------------
 .bold{
   font-family: 'Conv_Roboto-Bold';
   &--red{
@@ -128,7 +127,7 @@ body{
     display: inline-block;
   }
 }
-//----------classes-style
+//----------classes-style-------------------------------------------------------
 .wrap{
   height: 100%;
   min-height: 100vh;
@@ -138,7 +137,7 @@ body{
   align-items: center;
   background-color: $black;
 }
-//----------class-w-header
+//----------class-w-header------------------------------------------------------
 .w-header{
   height: 31px;
   display: flex;
@@ -192,7 +191,7 @@ body{
     }
   }
 }
-//----------class-w-info
+//----------class-w-info--------------------------------------------------------
 .w-info{
 }
 .w-in-item{
@@ -298,8 +297,7 @@ body{
   }
 
 }
-
-//----------class-w-date
+//----------class-w-date--------------------------------------------------------
 .w-date{
   background-color: $backgroundDate;
 }
@@ -398,7 +396,7 @@ body{
     display: block;
   }
 }
-//----------class-w-content
+//----------class-w-content-----------------------------------------------------
 .w-content{
   overflow-y: scroll;
   display: flex;
@@ -533,7 +531,7 @@ body{
   font-size: 14px;
 }
 
-//----------class-w-deadline
+//----------class-w-deadline----------------------------------------------------
 .w-deadline{
   display: flex;
   justify-content: space-between;
@@ -591,7 +589,7 @@ body{
     left: 8px;
   }
 }
-//----------class-footer
+//----------class-footer--------------------------------------------------------
 .w-footer{
   display: flex;
   justify-content: space-between;
