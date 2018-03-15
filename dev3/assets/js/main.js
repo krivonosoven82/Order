@@ -27,12 +27,12 @@ $(document).ready(function(){
       day: 'numeric'
     }
     let app = d.toLocaleString("ru", options);
-    $(".date").text(app);
+    $(".it-w-date").text(app);
   }
-  
+
   toShowDate();
 
   $("label").click(function(){
-    $(".date").hide();
+    $(".it-w-date").hide();
   });
 });

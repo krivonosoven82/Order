@@ -1,18 +1,5 @@
-//----------reset-style---------------------------------------------------------
-*,
-*::after,
-*::before{
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-*:active,
-*:hover,
-*:focus {
-    outline: 0;
-    outline-offset: 0;
-}
-//----------variables - color---------------------------------------------------
+
+//********** GlobasStyles.scss *************************************************
 $white: #fff;
 $black: #000;
 $red: #fe0000;
@@ -29,108 +16,22 @@ $infoLink: #337ab7;
 $lightGray: #b9b8b8;
 $borderLineLight: #d8d6d6;
 $borderLineDark: #acacac;
+$question: #b9b9b9;
 $twitter: #3aaaeb;
 $facebook: #3c5a9a;
 $backgroundDate: #f1f1f1;
+
 //----------mixin---------------------------------------------------------------
 @mixin transition($time: 0.3s){
   transition: all $time ease-in-out;
 }
 //----------base-style----------------------------------------------------------
 body{
-  width: 100%;
-  min-width: 320px;
   font-family: 'Conv_Roboto-Regular', 'Conv_Roboto-Bold',
    'FontAwesome';
 }
-//-----------global-class-------------------------------------------------------
-.img{
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-}
-.window{
-  width: 100%;
-  background-color: $white;
-}
-.section{
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  &--light{
-    border-bottom: 1px solid $borderLineLight;
-  }
-  &--dark{
-    border-bottom: 1px solid $borderLineDark;
-  }
-  &--data{
-    background-color: $backgroundDate;
-  }
-  &--footer{
-    background-color: $orange;
-  }
-}
-.btn{
-  border: none;
-  outline: none;
-  cursor: pointer;
-  @include transition;
-}
-//----------modify-class--------------------------------------------------------
-.bold{
-  font-family: 'Conv_Roboto-Bold';
-  &--red{
-    color: $red;
-  }
-  &--blue{
-    color: $blue;
-  }
-  &--green{
-    color: $green;
-  }
-}
-.box{
-  width: 940px;
-  padding: 10px 8px;
-  @media(max-width: 525px){
-    padding: 8px 4px 8px 5px;
-  }
-  &--header{
-    padding: 10px 8px 10px 6px;
-    @media(max-width: 525px){
-      padding: 12px 8px 12px 5px;
-    }
-  }
-  &--info{
-    padding: 10px 8px 10px 9px;
-  }
-  &--date{
-    padding: 0 9px;
-  }
-  &--content{
-    padding: 0;
-  }
-  &--deadline{
-    padding: 12px 8px 10px;
-    @media(max-width: 570px){
-      padding: 10px 8px;
-    }
-  }
-}
-.fa-question{
-  font-size: 11px;
-  color: $white;
-}
-.fa-search{
-  margin-right: 5px;
-}
-.fa-caret-down{
-  display: none;
-  @media(max-width: 679px){
-    display: inline-block;
-  }
-}
-//----------classes-style-------------------------------------------------------
+
+//********** Wrap.scss *********************************************************
 .wrap{
   height: 100%;
   min-height: 100vh;
@@ -140,9 +41,37 @@ body{
   align-items: center;
   background-color: $black;
 }
-//----------class-w-header------------------------------------------------------
+//********** Window.scss *******************************************************
+.window{
+  width: 100%;
+  min-width: 320px;
+  background-color: $white;
+}
+//********** Empty.scss ********************************************************
+.section-empty{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-bottom: 1px solid $borderLineLight;
+}
+.box-empty{
+  width: 940px;
+  padding: 10px 8px 10px 6px;
+  @media(max-width: 525px){
+    padding: 12px 8px 12px 5px;
+  }
+}
+//********** Header.scss *******************************************************
+.header{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-bottom: 1px solid $borderLineLight;
+}
 .w-header{
+  width: 940px;
   height: 31px;
+  padding: 0;
   display: flex;
   justify-content: flex-start;
   align-items: center;
@@ -163,7 +92,7 @@ body{
   align-items: center;
   font-size: 14px;
   color: $lightGray;
-  @media(max-width: 555px){
+  @media(max-width: 557px){
     flex-direction: column;
     justify-content: center;
     align-items: flex-start;
@@ -171,6 +100,7 @@ body{
   }
 }
 .h-a-item{
+  margin: 0;
   position: relative;
   display: flex;
   align-items: center;
@@ -188,14 +118,33 @@ body{
       width: 2px;
       height: 10px;
       background-color: $lightGray;
-      @media(max-width: 555px){
+      @media(max-width: 557px){
         display: none;
       }
     }
   }
 }
-//----------class-w-info--------------------------------------------------------
+.img{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.bold{
+  font-family: 'Conv_Roboto-Bold';
+}
+//********** Info.scss *********************************************************
+.info{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-bottom: 1px solid $borderLineLight;
+}
 .w-info{
+  width: 940px;
+  padding: 10px 8px 10px 9px;
+  @media(max-width: 525px){
+    padding: 8px 4px 8px 5px;
+  }
 }
 .w-in-item{
   margin-bottom: 10px;
@@ -274,6 +223,9 @@ body{
   color: $white;
   text-transform: uppercase;
   cursor: pointer;
+  border: none;
+  outline: none;
+  @include transition;
   &:hover{
     background-color: $orangeHover;
     color: $infoLink;
@@ -294,14 +246,61 @@ body{
     padding: 0 7px;
   }
 }
+
+.in-btn-mob{
+  width: 142px;
+  height: 36px;
+  border-radius: 5px;
+  background-color: $brightGreen;
+  font-size: 14px;
+  color: $white;
+  text-transform: uppercase;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  @include transition;
+  @media(max-width: 679px){
+    height: 38px;
+  }
+}
 .btn-mobail{
   display: none;
   @media(max-width: 679px){
     display: block;
   }
-
 }
-//----------class-w-date--------------------------------------------------------
+.img{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.bold{
+  font-family: 'Conv_Roboto-Bold';
+}
+.fa-search{
+  margin-right: 5px;
+}
+.fa-caret-down{
+  display: none;
+  @media(max-width: 679px){
+    display: inline-block;
+  }
+}
+//********** Date.scss *********************************************************
+.date{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-bottom: 1px solid $borderLineLight;
+  background-color: $backgroundDate;
+}
+.w-date{
+  width: 940px;
+  padding: 0 9px;
+  @media(max-width: 525px){
+    padding: 8px 4px 8px 5px;
+  }
+}
 .w-d-item{
   padding: 1px 16px 1px 9px;
   display: flex;
@@ -326,7 +325,7 @@ body{
   position: relative;
   margin: 0 5px;
 }
-.date{
+.it-w-date{
   position: absolute;
   top: 50%;
   left: 50%;
@@ -374,6 +373,10 @@ body{
   font-size: 14px;
   color: $white;
   text-transform: uppercase;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  @include transition;
   @media(max-width: 679px){
     height: 38px;
   }
@@ -397,13 +400,31 @@ body{
     display: block;
   }
 }
-//----------class-w-content-----------------------------------------------------
+.fa-search{
+  margin-right: 5px;
+}
+//********** Content.scss ******************************************************
+.content{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-bottom: 1px solid $borderLineLight;
+
+}
 .w-content{
+  width: 940px;
+  padding: 0;
   overflow-y: scroll;
   display: flex;
   flex-wrap: wrap;
   @media(max-width: 679px){
     padding-top: 20px;
+    @media(max-width: 525px){
+      padding: 8px 4px 8px 5px;
+      @media(max-width: 373px){
+        padding-left: 40px;
+      }
+    }
   }
 }
 .w-con-item{
@@ -484,6 +505,11 @@ body{
     margin-bottom: 0;
   }
 }
+.img{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
 .img-desktop{
   @media(max-width: 679px){
     display: none;
@@ -503,7 +529,6 @@ body{
 .ov-info{
   width: 100%;
   height: 100%;
-  padding: 10px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -531,18 +556,43 @@ body{
 .ov-text-small{
   font-size: 14px;
 }
-
-//----------class-w-deadline----------------------------------------------------
+.bold{
+  font-family: 'Conv_Roboto-Bold';
+}
+.fa-search{
+  margin-right: 5px;
+}
+//********** Deadline.scss *****************************************************
+.deadline{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 .w-deadline{
   display: flex;
   justify-content: space-between;
-  @media(max-width: 570px){
+  width: 940px;
+  padding: 12px 8px 10px;
+  @media(max-width: 590px){
     padding-left: 30px;
     flex-direction: column;
     position: relative;
   }
 }
+.bold{
+  font-family: 'Conv_Roboto-Bold';
+  &--red{
+    color: $red;
+  }
+  &--blue{
+    color: $blue;
+  }
+  &--green{
+    color: $green;
+  }
+}
 .d-l-title{
+  margin: 0;
   font-size: 16px;
   color: $gray;
 }
@@ -563,8 +613,17 @@ body{
     color: $red;
   }
 }
+.d-i-icon{
+  width: 14px;
+  height: 14px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: $question;
+  cursor: pointer;
+}
 .w-d-left{
-  @media(max-width: 570px){
+  @media(max-width: 590px){
     margin-bottom: 8px;
   }
 }
@@ -572,43 +631,64 @@ body{
   width: 250px;
 }
 .d-r-text{
+  margin: 0;
   font-size: 12px;
   color: $lightGray;
   text-align: right;
-  @media(max-width: 570px){
+  @media(max-width: 590px){
     text-align: left;
   }
 }
 .r-t-gray{
   color: $gray;
 }
-.deadline{
+.d-i-deadline{
   margin-right: 0;
-  @media(max-width: 570px){
+
+  @media(max-width: 590px){
     position: absolute;
     top: 12px;
     left: 8px;
   }
 }
-//----------class-footer--------------------------------------------------------
+.fa-question{
+  font-size: 11px;
+  color: $white;
+}
+//********** Footer.scss *******************************************************
+.section-footer{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: $orange;
+}
 .w-footer{
   display: flex;
   justify-content: space-between;
-  @media(max-width: 582px){
+  width: 940px;
+  padding: 10px 8px;
+  @media(max-width: 630px){
     flex-wrap: wrap;
     justify-content: space-around;
     align-items: center;
-    @media(max-width: 400px){
-      flex-direction: column;
-      align-items: center;
+    @media(max-width: 525px){
+      padding: 8px 4px 8px 5px;
+      @media(max-width: 400px){
+        flex-direction: column;
+        align-items: center;
+      }
     }
   }
 }
 .w-f-item{
-  @media(max-width: 582px){
+  @media(max-width: 630px){
     margin-bottom: 28px;
-    @media(max-width: 400px){
-      width: 232px;
+    margin-right: 20px;
+    @media(max-width: 600px){
+      margin-right: 0;
+      @media(max-width: 400px){
+        width: 232px;
+      }
     }
   }
   &--left{
@@ -619,7 +699,7 @@ body{
     flex-direction: column;
     justify-content: center;
     order: 2;
-    @media(max-width: 582px){
+    @media(max-width: 630px){
       order: 3;
     }
   }
@@ -628,13 +708,14 @@ body{
     flex-direction: column;
     align-items: flex-end;
     order: 3;
-    @media(max-width: 582px){
+    @media(max-width: 630px){
       align-items: flex-start;
       order: 2;
     }
   }
 }
 .f-i-title{
+  margin: 0;
   margin-bottom: 10px;
   font-size: 14px;
   color: $white;
@@ -693,6 +774,11 @@ body{
   justify-content: center;
   align-items: center;
 }
+.img{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
 .f-i-social{
   width: 26px;
   height: 26px;
@@ -715,4 +801,7 @@ body{
 .facebook{
   width: 26px;
   height: 26px;
+}
+.bold{
+  font-family: 'Conv_Roboto-Bold';
 }

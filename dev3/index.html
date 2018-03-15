@@ -12,17 +12,25 @@
     <link rel="stylesheet" href="./assets/style.css">
 </head>
 <body>
+
+  <!-- Wrap - component -->
   <div class="wrap">
+  <!-- /Wrap -->
+
+    <!-- Window - component -->
     <div class="window">
-      <div class="section section--light">
-        <div class="box box--header">
+    <!-- /Window -->
+
+      <!-- Empty - component -->
+      <div class="section-empty">
+        <div class="box-empty">
         </div>
       </div>
+      <!-- /Empty -->
 
-      <!-- class - w-header -->
-
-      <div class="section section--light">
-        <div class="w-header box box--header">
+      <!-- Header - component -->
+      <div class="header">
+        <div class="w-header">
           <div class="w-h-icon">
             <img src="assets/images/man_17x17.png" class="img" alt="icon">
           </div>
@@ -40,11 +48,11 @@
           </div>
         </div>
       </div>
+      <!-- /Header -->
 
-      <!-- class - w-info -->
-
-      <div class="section section--light">
-        <div class="w-info box box-info">
+      <!-- Info - component -->
+      <div class="info">
+        <div class="w-info">
           <div class="w-in-item">
             <div class="in-i-icon">
               <img src="assets/images/down.png" alt="" class="img">
@@ -55,13 +63,13 @@
           </div>
           <div class="w-in-item item-link">
             <a class="in-i-link link-desktop" href="#">договор поставки</a>
-            <button id="toggle-menu" class="in-i-btn btn">
+            <button id="toggle-menu" class="in-i-btn">
               накладные
               <i class="fa fa-caret-down"></i>
             </button>
             <a class="in-i-link link-desktop" href="#">счета</a>
             <a class="in-i-link link-desktop" href="#">акты сверки</a>
-            <button class="d-i-btn btn btn-mobail">
+            <button class="in-btn-mob btn-mobail">
               <i class="fa fa-search"></i>
               показать
             </button>
@@ -73,39 +81,39 @@
           </div>
         </div>
       </div>
+      <!-- /Info -->
 
-      <!-- class - w-date -->
-
-      <div class="section section--light section--data">
-        <div class="w-date box box--date">
+      <!-- Date - component -->
+      <div class="date">
+        <div class="w-date">
           <div class="w-d-item">
             <span class="d-it-wrap">
               <span class="it-w-text text-desktop">Период с</span>
               <span class="it-w-text text-mobile">С</span>
               <label class="it-w-label">
                 <input class="it-w-input" type="text">
-                <span class="date"></span>
+                <span class="it-w-date"></span>
                 <img class="down" src="./assets/images/inputDate.png">
               </label>
               <span class="it-w-text">по</span>
               <label class="it-w-label">
                 <input class="it-w-input" type="text">
-                <span class="date"></span>
+                <span class="it-w-date"></span>
                 <img class="down" src="./assets/images/inputDate.png">
               </label>
             </span>
-            <button class="d-i-btn btn btn-desktop">
+            <button class="d-i-btn btn-desktop">
               <i class="fa fa-search"></i>
               показать
             </button>
           </div>
         </div>
       </div>
+      <!-- /Date -->
 
-      <!-- class - w-content -->
-
-      <div class="section section--light">
-        <div class="w-content box box--content">
+      <!-- Content - component -->
+      <div class="content">
+        <div class="w-content">
           <div class="w-con-item">
             <span class="con-it-text">25 декабря <span>2017</span></span>
             <div class="con-it-img ">
@@ -254,18 +262,18 @@
           </div>
         </div>
       </div>
+      <!-- /Content -->
 
-      <!-- Class - deadline -->
-
-      <div class="section">
-        <div class="w-deadline box box--deadline">
+      <!-- deadlene - component -->
+      <div class="deadline">
+        <div class="w-deadline">
           <div class="w-d-left">
             <p class="d-l-title">До погашения овердрафта в сумме:</p>
             <div class="d-l-item">
               <span class="l-i-text l-i-text--green bold">200.00 грн</span>
               <span class="l-i-text l-i-text--gray">осталось</span>
               <span class="l-i-text l-i-text--red bold">4 дня</span>
-              <div class="b-i-icon deadline">
+              <div class="d-i-icon d-i-deadline">
                 <i class="fa fa-question" aria-hidden="true"></i>
               </div>
             </div>
@@ -278,11 +286,11 @@
           </div>
         </div>
       </div>
+      <!-- /Deadline -->
 
-      <!-- class - w-footer -->
-
-      <div class="section section--footer">
-        <div class="w-footer box">
+      <!-- Footer - component -->
+      <div class="section-footer">
+        <div class="w-footer">
           <div class="w-f-item w-f-item--left">
             <p class="f-i-title bold">Контакты:</p>
             <div class="f-i-contact">
@@ -316,8 +324,14 @@
           </div>
         </div>
       </div>
+    <!-- /Footer -->
+
     </div>
+<!-- /Window -->
+
   </div>
+<!-- /Wrap -->
+
   <script src="./assets/js/jquery-3.2.1.min.js"></script>
   <script src="./assets/js/jquery-ui.js"></script>
   <script src="./assets/js/main.js"></script>
