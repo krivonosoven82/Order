@@ -1,0 +1,91 @@
+
+.ui-widget.ui-widget-content{
+  width: 246px;
+  min-height: 222px;
+}
+
+.ui-state-default, .ui-widget-content .ui-state-default,
+.ui-widget-header .ui-state-default,
+.ui-button, html .ui-button.ui-state-disabled:hover,
+html .ui-button.ui-state-disabled:active {
+  border: none;
+  background-color: transparent;
+  text-align: center;
+}
+.ui-datepicker{
+  padding: 0;
+}
+.ui-datepicker .ui-datepicker-header{
+  background-color: #f0f0f0;
+  padding-top: 15px ;
+  border: none;
+}
+.ui-datepicker th{
+  background-color: #f0f0f0;
+  border-bottom: 1px solid #acacac;
+  margin-bottom: 15px;
+}
+
+.ui-widget-header a:hover{
+  border: none;
+}
+.ui-datepicker .ui-datepicker-prev, .ui-datepicker .ui-datepicker-next{
+  top: 13px;
+}
+.ui-datepicker .ui-datepicker-prev{
+  left: 0;
+}
+.ui-datepicker .ui-datepicker-next{
+  right: 0;
+}
+.ui-datepicker-prev{
+    background-image: url("./images/left.png");
+    background-position: center;
+    background-size: 10px, 10px;
+    background-repeat: no-repeat;
+    cursor: pointer;
+}
+.ui-datepicker-prev:hover{
+    background-image: url("./images/left.png");
+    background-position: center;
+    background-size: 10px, 10px;
+    background-repeat: no-repeat;
+    top: 13px;
+}
+.ui-datepicker-next{
+    background-image: url("./images/right.png");
+    background-position: center;
+    background-size: 10px, 10px;
+    background-repeat: no-repeat;
+    cursor: pointer;
+}
+.ui-datepicker-next:hover{
+    background-image: url("./images/right.png");
+    background-position: center;
+    background-size: 10px, 10px;
+    background-repeat: no-repeat;
+    top: 13px;
+}
+ .ui-datepicker-week-end > a.ui-state-default{
+   font-size: 16px;
+   color: #b9b8b8;
+ }
+ .ui-datepicker-today{
+   background-color: #296ca1;
+   border-radius: 5px;
+   width: 10px;
+ }
+
+  .ui-state-default, .ui-widget-content .ui-state-default,
+  .ui-widget-header .ui-state-default, .ui-button,
+  html .ui-button.ui-state-disabled:hover,
+   html .ui-button.ui-state-disabled:active{
+     font-size: 16px;
+     color: #000;
+   }
+
+ .ui-state-highlight, .ui-widget-content .ui-state-highlight,
+ .ui-widget-header .ui-state-highlight{
+   font-size: 16px;
+   color: #fff;
+ }

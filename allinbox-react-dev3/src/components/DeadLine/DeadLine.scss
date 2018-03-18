@@ -1,0 +1,95 @@
+@import './../../assets/GlobalStyles/Colors.scss';
+@import './../../index.scss';
+.deadline{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.w-deadline{
+  display: flex;
+  justify-content: space-between;
+  width: 940px;
+  padding: 12px 8px 10px;
+  @media(max-width: 590px){
+    padding-left: 30px;
+    flex-direction: column;
+    position: relative;
+  }
+}
+.bold{
+  font-family: 'Roboto', sans-serif;
+  font-weight: 700;
+  &--red{
+    color: $red;
+  }
+  &--blue{
+    color: $blue;
+  }
+  &--green{
+    color: $green;
+  }
+}
+.d-l-title{
+  margin: 0;
+  font-size: 16px;
+  color: $gray;
+}
+.d-l-item{
+  display: flex;
+  align-items: center;
+}
+.l-i-text{
+  margin-right: 4px;
+  font-size: 22px;
+  &--green{
+    color: $green;
+  }
+  &--gray{
+    color: $gray;
+  }
+  &--red{
+    color: $red;
+  }
+}
+.d-i-icon{
+  width: 14px;
+  height: 14px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: $question;
+  cursor: pointer;
+}
+.w-d-left{
+  @media(max-width: 590px){
+    margin-bottom: 8px;
+  }
+}
+.w-d-right{
+  width: 250px;
+}
+.d-r-text{
+  margin: 0;
+  font-size: 12px;
+  color: $lightGray;
+  text-align: right;
+  @media(max-width: 590px){
+    text-align: left;
+  }
+}
+.r-t-gray{
+  color: $gray;
+}
+.d-i-deadline{
+  margin-right: 0;
+
+  @media(max-width: 590px){
+    position: absolute;
+    top: 12px;
+    left: 8px;
+  }
+}
+.fa-question{
+  font-size: 11px;
+  color: $white;
+}

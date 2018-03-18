@@ -1,0 +1,14 @@
+@import './../../assets/GlobalStyles/Colors.scss';
+.empty{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-bottom: 1px solid $borderLineLight;
+}
+.empty-box{
+  width: 940px;
+  padding: 10px 8px 10px 6px;
+  @media(max-width: 525px){
+    padding: 12px 8px 12px 5px;
+  }
+}
