@@ -122,7 +122,7 @@ class Content extends Component {
             <span className="con-it-text it-text-desktop">{"25 000.00 грн"}</span>
             <div className="c-it-overlay">
               <div className="ov-background">
-                <img src={biils_03} alt="" class="img" />
+                <img src={biils_03} alt="" className="img" />
               </div>
               <div className="ov-info">
                 <span className="ov-text bold">накладная</span>
